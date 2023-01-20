@@ -18,9 +18,15 @@ For example, Ethereum allows to attach extra custom the form of hexadecimal char
 
 [The Ethers project](https://www.npmjs.com/package/ethers) is doing most of the hard work under the hood.
 
+## Example
+
+`0xde4b636683d5970c0d00b30d76bca801484f8f3db6a878145459ef23be1445f8` is an exemplary message in a block. You can view the transaction either on [Message in a Block](https://message-in-a-block.com/tx/0xde4b636683d5970c0d00b30d76bca801484f8f3db6a878145459ef23be1445f8) itself or [Etherscan](https://etherscan.io/tx/0xde4b636683d5970c0d00b30d76bca801484f8f3db6a878145459ef23be1445f8) where you can view the tansaction’s input data as UTF-8.
+
+![Screenshot of exemplary on Etherscan](./docs/etherscan.png)
+
 ## Future
 
-This project may be extended one day to come back to the original idea of having a »message in a bottle« game on the blockchain. Or it could be used to implement some kind of »pay to contact me«-like service by utilizing ENS address aliases and providing vanity URLs such as `messageinablock.com/to/rasshofer.eth`. Let’s see.
+This project may be extended one day to come back to the original idea of having a »message in a bottle« game on the blockchain. Or it could be used to implement some kind of »pay to contact me«-like service by utilizing ENS address aliases and providing vanity URLs such as `message-in-a-block.com/to/rasshofer.eth`. Let’s see.
 
 ## Code of Conduct
 
