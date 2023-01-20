@@ -1,0 +1,27 @@
+@import '../tokens/breakpoints';
+
+.textarea {
+  display: block;
+  width: 100%;
+  min-height: 10rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-small);
+  color: inherit;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height);
+  resize: none;
+
+  @include respond-medium-up {
+    min-height: 15rem;
+  }
+
+  @include respond-medium-up {
+    min-height: 20rem;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}

@@ -1,0 +1,30 @@
+.separator {
+  overflow: hidden;
+}
+
+.separator__content {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100vw;
+    height: 1px;
+    transform: translateY(-50%);
+    background: var(--color-text);
+    opacity: var(--opacity-low);
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
+  }
+}

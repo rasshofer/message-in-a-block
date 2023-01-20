@@ -1,0 +1,9 @@
+@import '../tokens/breakpoints';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}

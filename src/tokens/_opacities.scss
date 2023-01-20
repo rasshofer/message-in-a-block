@@ -1,0 +1,7 @@
+@mixin opacity-tokens {
+  --opacity-full: 1;
+  --opacity-high: 0.8;
+  --opacity-medium: 0.5;
+  --opacity-low: 0.2;
+  --opacity-disabled: 0.1;
+}

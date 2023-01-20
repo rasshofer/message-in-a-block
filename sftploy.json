@@ -1,0 +1,5 @@
+{
+  "localRoot": "build",
+  "remoteRoot": "/",
+  "exclude": [".DS_Store"]
+}

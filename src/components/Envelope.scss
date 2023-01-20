@@ -1,0 +1,25 @@
+.envelope {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--radius-small);
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-red) 0,
+    var(--color-red) 1rem,
+    #fff 0,
+    #fff 2rem,
+    var(--color-blue) 0,
+    var(--color-blue) 3rem,
+    #fff 0,
+    #fff 4rem
+  );
+  box-shadow: 0 0.5rem 1.5rem 0.5rem var(--color-shadow);
+}
+
+.envelope__content {
+  border-radius: var(--radius-small);
+  background: #fff;
+  color: #000;
+  overflow: hidden;
+}

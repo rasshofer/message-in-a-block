@@ -1,0 +1,63 @@
+.file-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: var(--radius-small);
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem 0.5rem var(--color-shadow);
+  overflow: hidden;
+}
+
+.file-input__name {
+  flex: 1 1 auto;
+  margin-right: auto;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height);
+  text-transform: uppercase;
+  color: var(--color-background);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.file-input__clear {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  padding: 0 1rem;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-huge);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-red);
+  cursor: pointer;
+}
+
+.file-input__action {
+  flex: 0 0 auto;
+  padding: 0.5rem 1rem;
+  background: var(--color-background);
+  border-radius: var(--radius-small);
+  color: var(--color-text);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height);
+  text-transform: uppercase;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.file-input__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 100vw;
+  opacity: 0;
+}

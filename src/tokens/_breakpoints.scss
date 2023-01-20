@@ -1,0 +1,31 @@
+$breakpoint-medium: 500px;
+$breakpoint-large: 1000px;
+
+@mixin breakpoint-tokens {
+  --breakpoint-medium: 500px;
+  --breakpoint-large: 1000px;
+}
+
+@mixin respond-medium-up() {
+  @media (min-width: #{$breakpoint-medium}) {
+    @content;
+  }
+}
+
+@mixin respond-medium-down() {
+  @media (max-width: #{$breakpoint-medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin respond-large-up() {
+  @media (min-width: #{$breakpoint-large}) {
+    @content;
+  }
+}
+
+@mixin respond-large-down() {
+  @media (max-width: #{$breakpoint-large - 1px}) {
+    @content;
+  }
+}

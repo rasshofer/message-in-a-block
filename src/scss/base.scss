@@ -1,0 +1,55 @@
+@use 'sass:math';
+
+@import '../tokens';
+
+* {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  -webkit-text-size-adjust: 100%;
+
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  padding: var(--spacing);
+  background: linear-gradient(
+    45deg,
+    var(--color-content),
+    var(--color-background)
+  );
+  color: var(--color-text);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height);
+}
+
+p {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: inherit;
+
+  &:focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 0.25rem;
+    border-radius: var(--radius-tiny);
+  }
+}

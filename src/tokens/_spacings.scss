@@ -1,0 +1,13 @@
+@import './breakpoints';
+
+@mixin spacing-tokens {
+  --spacing: 20px;
+
+  @include respond-medium-up {
+    --spacing: 40px;
+  }
+
+  @include respond-large-up {
+    --spacing: 60px;
+  }
+}

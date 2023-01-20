@@ -1,0 +1,33 @@
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-text);
+  border-radius: var(--radius-small);
+  color: var(--color-background);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height);
+  text-transform: uppercase;
+  transition: transform 200ms ease, opacity 200ms ease;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 0.25rem;
+  }
+
+  &.button--disabled {
+    opacity: var(--opacity-medium);
+  }
+
+  &:not(.button--disabled) {
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}

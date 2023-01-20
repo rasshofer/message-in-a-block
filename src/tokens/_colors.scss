@@ -1,0 +1,37 @@
+@mixin color-tokens-light {
+  --color-background: #d8dee9;
+  --color-content: #e5e9f0;
+  --color-text: #000;
+  --color-text-passive: rgba(0, 0, 0, var(--opacity-medium));
+  --color-shadow: rgba(0, 0, 0, var(--opacity-disabled));
+}
+
+@mixin color-tokens-dark {
+  --color-background: #2e3440;
+  --color-content: #3b4252;
+  --color-text: #fff;
+  --color-text-passive: rgba(255, 255, 255, var(--opacity-medium));
+  --color-shadow: rgba(0, 0, 0, var(--opacity-disabled));
+}
+
+@mixin color-tokens-shared {
+  --color-red: #bf616a;
+  --color-blue: #5e81ac;
+  --color-neutral: #5e81ac;
+  --color-on-neutral: #fff;
+  --color-positive: #a3be8c;
+  --color-on-positive: #000;
+  --color-negative: #bf616a;
+  --color-on-negative: #fff;
+  --color-warning: #d08770;
+  --color-on-warning: #000;
+}
+
+@mixin color-tokens {
+  @include color-tokens-light;
+  @include color-tokens-shared;
+
+  @media (prefers-color-scheme: dark) {
+    @include color-tokens-dark;
+  }
+}

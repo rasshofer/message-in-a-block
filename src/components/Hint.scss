@@ -1,0 +1,13 @@
+$colors: ('neutral', 'positive', 'negative', 'warning');
+
+.hint {
+  padding: 1rem;
+  border-radius: var(--radius-small);
+
+  @each $key in $colors {
+    &.hint--#{$key} {
+      background: var(--color-#{$key});
+      color: var(--color-on-#{$key});
+    }
+  }
+}

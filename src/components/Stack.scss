@@ -1,0 +1,11 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) / 2);
+}
+
+.stack__item {
+  &:empty {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - 'main'
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install
+        run: yarn install --frozen-lockfile --prefer-offline
+
+      - name: Build
+        env:
+          REACT_APP_API_ENDPOINT: /api
+        run: yarn build
+
+      - name: Deploy
+        env:
+          SFTPLOY_HOST: ${{ secrets.SFTPLOY_HOST }}
+          SFTPLOY_PORT: ${{ secrets.SFTPLOY_PORT }}
+          SFTPLOY_USERNAME: ${{ secrets.SFTPLOY_USERNAME }}
+          SFTPLOY_PASSWORD: ${{ secrets.SFTPLOY_PASSWORD }}
+        run: yarn deploy

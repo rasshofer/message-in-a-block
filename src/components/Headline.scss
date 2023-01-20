@@ -1,0 +1,21 @@
+.headline {
+  color: inherit;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height);
+  text-align: center;
+  word-break: break-all;
+
+  &.headline--1 {
+    font-size: 1.5rem;
+  }
+
+  &.headline--2 {
+    font-size: 1.25rem;
+  }
+
+  &.headline--3 {
+    font-size: 1rem;
+  }
+}

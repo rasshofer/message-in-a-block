@@ -1,0 +1,16 @@
+@import '../tokens/breakpoints';
+
+.footer {
+  margin-top: var(--spacing);
+  font-size: var(--font-size-small);
+  color: var(--color-text-passive);
+
+  @include respond-medium-up {
+    text-align: center;
+  }
+}
+
+.footer__link {
+  color: var(--color-text);
+  text-decoration: none;
+}
