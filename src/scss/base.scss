@@ -53,3 +53,7 @@ a {
     border-radius: var(--radius-tiny);
   }
 }
+
+code {
+  word-break: break-all;
+}

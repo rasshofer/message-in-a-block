@@ -77,7 +77,7 @@ export const Form: FC = () => {
             <p>{errorMessage} Feel free to try again anytime.</p>
           </Hint>
         ) : null}
-        {!isSubmitting && succeededTransaction ? (
+        {succeededTransaction ? (
           <Hint variant="positive">
             <p>Yay! Your message has been written onto the blockchain.</p>
             <p>
