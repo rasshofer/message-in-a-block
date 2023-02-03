@@ -21,16 +21,16 @@ jobs:
       - name: Cache Node.js modules
         uses: actions/cache@v2
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-build-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: npm ci --omit=optional --prefer-offline --no-audit
 
       - name: Build
         env:
           REACT_APP_API_ENDPOINT: /api
-        run: yarn build
+        run: npm run build
 
       - name: Deploy
         env:
